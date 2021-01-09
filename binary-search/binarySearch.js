@@ -19,14 +19,29 @@ const items = [
   18,
   19,
   20,
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34,
+  45,
 ];
 
 const binarySearch = (searchKey, dataList) => {
-  let low = 0; 
+  let low = 0;
   let high = dataList.length - 1;
   let mid = 0;
 
-  while (low <= high) {   
+  while (low <= high) {
     mid = Math.trunc((high + low) / 2);
     const value = dataList[mid];
     if (value === searchKey) {
@@ -48,8 +63,10 @@ const binarySearch = (searchKey, dataList) => {
   };
 };
 
-
 console.log("BINARY SEARCH  Search For 1 : ", binarySearch(1, items));
 console.log("BINARY SEARCH  Search For 30 : ", binarySearch(30, items));
 console.log("BINARY SEARCH  Search For 20 : ", binarySearch(20, items));
 console.log("BINARY SEARCH  Search For 10 : ", binarySearch(10, items));
+console.log("BINARY SEARCH  Search For 300 : ", binarySearch(300, items));
+console.log("BINARY SEARCH  Search For -1 : ", binarySearch(-1, items));
+console.log("BINARY SEARCH  Search For ABC : ", binarySearch("ABC", items));
